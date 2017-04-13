@@ -11,6 +11,8 @@ namespace HAL
         {
             // import the entire dictionary into one string
             string dict = Properties.Resources.dict;
+            int max = 0;
+            string longestWord = String.Empty;
 
             // break up into an array of strings
             char[] delimiters = new char[] { '\r', '\n' };
@@ -56,15 +58,18 @@ namespace HAL
 
                     if(d.ContainsKey(shift.ToString()))
                     {
+                        if(shift.Length > max)
+                        {
+                            max = shift.Length;
+                            longestWord = shift.ToString();
+                        }
                         Console.WriteLine("Shifted by {2}: {0} {1}", word, shift, j);
                     }
-
-                    
                 }
             }
-        
-        }
 
+            Console.WriteLine("{0} is the longest word at a length of {1}", longestWord, longestWord.Length);
+        }
     }
 }
 
