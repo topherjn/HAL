@@ -51,11 +51,15 @@ namespace HAL
                         else letter += j;
 
                         letters[i] = (char)letter;
+                        shift.Append(letters[i]);
                     }
 
-                    Console.WriteLine(letters);
+                    if(d.ContainsKey(shift.ToString()))
+                    {
+                        Console.WriteLine("Shifted by {2}: {0} {1}", word, shift, j);
+                    }
 
-
+                    
                 }
             }
         
