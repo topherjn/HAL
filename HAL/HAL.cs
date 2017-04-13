@@ -17,25 +17,18 @@ namespace HAL
             string[] lines = dict.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
 
             // insert each word into a binary tree
+            SortedDictionary<string, string> d = new SortedDictionary<string, string>();
+
             foreach(var word in lines)
             {
-                Console.WriteLine(word);
+                d.Add(word, word);
             }
 
-            // take each word
-
-            // shift each letter in the word by a number
-
-            // see if there is a hit in the dictionary
-
-            // if yes add to a list of hits
-
-
-
-            // the followig console write demonstrates the success of the resource
-            // import.  You will want to comment it out or delete it eventually
-            Console.WriteLine(dict);
-
+            foreach(var pair in d)
+            {
+                Console.WriteLine(pair.Key + " " + pair.Value);
+            }
+        
         }
 
     }
