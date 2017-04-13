@@ -17,25 +17,48 @@ namespace HAL
             string[] lines = dict.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
 
             // insert each word into a binary tree
+            SortedDictionary<string, string> d = new SortedDictionary<string, string>();
+
             foreach(var word in lines)
             {
-                Console.WriteLine(word);
+                d.Add(word, word);
             }
 
-            // take each word
+            //foreach(var pair in d)
+            //{
+            //    Console.WriteLine(pair.Key + " " + pair.Value);
+            //}
 
-            // shift each letter in the word by a number
+            // number of times to shift
+            for(int j = 1; j < 26; j++)
+            {
+                // for each dictionary entry
+                foreach(var pair in d)
+                {
+                    // create a string builder
+                    StringBuilder shift = new StringBuilder();
+                    string word = pair.Value;
 
-            // see if there is a hit in the dictionary
+                    // convert the word into an array of characters
+                    char[] letters = word.ToCharArray();
 
-            // if yes add to a list of hits
+                    // iterate over all the characters in the word
+                    for(int i = 0; i < letters.Length; i++)
+                    {
+                        int letter = (int)letters[i];
+
+                        if (letter + j > 'z') letter -= (26 - j);
+                        else letter += j;
+
+                        letters[i] = (char)letter;
+                    }
+
+                    Console.WriteLine(letters);
 
 
-
-            // the followig console write demonstrates the success of the resource
-            // import.  You will want to comment it out or delete it eventually
-            Console.WriteLine(dict);
-
+                }
+            }
+        
         }
 
     }
