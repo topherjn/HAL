@@ -17,3 +17,19 @@ C:\Users\fctuser\Desktop\HAL\HAL\bin\Debug\HAL.pdb
 F:\Visual Studio 2012\Projects\HAL\HAL\bin\Debug\HAL.exe.config
 F:\Visual Studio 2012\Projects\HAL\HAL\obj\Debug\HAL.exe
 F:\Visual Studio 2012\Projects\HAL\HAL\obj\Debug\HAL.pdb
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\bin\Debug\HAL.exe.config
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\obj\Debug\HAL.exe
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\obj\Debug\HAL.pdb
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\bin\Debug\HAL.exe
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\bin\Debug\HAL.pdb
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\obj\Debug\HAL.csprojResolveAssemblyReference.cache
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\obj\Debug\HAL.Properties.Resources.resources
+C:\Users\nicholson\Desktop\New folder\HAL\HAL\obj\Debug\HAL.csproj.GenerateResource.Cache
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\bin\Debug\HAL.exe.config
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.exe
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.pdb
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\bin\Debug\HAL.exe
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\bin\Debug\HAL.pdb
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.csprojResolveAssemblyReference.cache
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.Properties.Resources.resources
+C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.csproj.GenerateResource.Cache
