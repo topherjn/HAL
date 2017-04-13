@@ -19,11 +19,12 @@ namespace HAL
             string[] lines = dict.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
 
             // insert each word into a binary tree
-            SortedDictionary<string, string> d = new SortedDictionary<string, string>();
+            // SortedDictionary<string, string> d = new SortedDictionary<string, string>();
+            List<string> d = new List<string>();
 
             foreach(var word in lines)
             {
-                d.Add(word, word);
+                d.Add(word);
             }
 
             //foreach(var pair in d)
@@ -35,11 +36,11 @@ namespace HAL
             for(int j = 1; j < 26; j++)
             {
                 // for each dictionary entry
-                foreach(var pair in d)
+                foreach(var word in d)
                 {
                     // create a string builder
-                    StringBuilder shift = new StringBuilder();
-                    string word = pair.Value;
+                    string shift = string.Empty;
+                  
 
                     // convert the word into an array of characters
                     char[] letters = word.ToCharArray();
@@ -49,14 +50,14 @@ namespace HAL
                     {
                         int letter = (int)letters[i];
 
-                        if (letter + j > 'z') letter -= (26 - j);
+                        if (letter + j > 'z') letter += j - 26;
                         else letter += j;
 
                         letters[i] = (char)letter;
-                        shift.Append(letters[i]);
+                        shift += letters[i].ToString();
                     }
 
-                    if(d.ContainsKey(shift.ToString()))
+                    if(d.Contains(shift))
                     {
                         if(shift.Length > max)
                         {
