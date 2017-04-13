@@ -24,9 +24,39 @@ namespace HAL
                 d.Add(word, word);
             }
 
-            foreach(var pair in d)
+            //foreach(var pair in d)
+            //{
+            //    Console.WriteLine(pair.Key + " " + pair.Value);
+            //}
+
+            // number of times to shift
+            for(int j = 1; j < 26; j++)
             {
-                Console.WriteLine(pair.Key + " " + pair.Value);
+                // for each dictionary entry
+                foreach(var pair in d)
+                {
+                    // create a string builder
+                    StringBuilder shift = new StringBuilder();
+                    string word = pair.Value;
+
+                    // convert the word into an array of characters
+                    char[] letters = word.ToCharArray();
+
+                    // iterate over all the characters in the word
+                    for(int i = 0; i < letters.Length; i++)
+                    {
+                        int letter = (int)letters[i];
+
+                        if (letter + j > 'z') letter -= (26 - j);
+                        else letter += j;
+
+                        letters[i] = (char)letter;
+                    }
+
+                    Console.WriteLine(letters);
+
+
+                }
             }
         
         }
