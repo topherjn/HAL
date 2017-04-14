@@ -13,6 +13,7 @@ namespace HAL
             string dict = Properties.Resources.dict;
             int max = 0;
             string longestWord = String.Empty;
+            int count = 0;
 
             // break up into an array of strings
             char[] delimiters = new char[] { '\r', '\n' };
@@ -58,16 +59,20 @@ namespace HAL
 
                     if(d.ContainsKey(shift.ToString()))
                     {
-                        if(shift.Length > max)
+                        count++;
+
+                        if (shift.Length > max)
                         {
+                           
                             max = shift.Length;
-                            longestWord = shift.ToString();
+                            longestWord = word;
                         }
                         Console.WriteLine("Shifted by {2}: {0} {1}", word, shift, j);
                     }
                 }
             }
 
+            Console.WriteLine("{0} words found", count);
             Console.WriteLine("{0} is the longest word at a length of {1}", longestWord, longestWord.Length);
         }
     }
