@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{BC7ED8FE-D7B2-4A03-9C58-1D2BA36C972C}|HAL\\HAL.csproj|c:\\users\\nicho\\source\\repos\\hal\\hal\\hal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC7ED8FE-D7B2-4A03-9C58-1D2BA36C972C}|HAL\\HAL.csproj|solutionrelative:hal\\hal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC7ED8FE-D7B2-4A03-9C58-1D2BA36C972C}|HAL\\HAL.csproj|c:\\users\\nicho\\source\\repos\\hal\\hal\\wordpair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC7ED8FE-D7B2-4A03-9C58-1D2BA36C972C}|HAL\\HAL.csproj|solutionrelative:hal\\wordpair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +21,17 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WordPair.cs",
+              "DocumentMoniker": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\WordPair.cs",
+              "RelativeDocumentMoniker": "HAL\\WordPair.cs",
+              "ToolTip": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\WordPair.cs",
+              "RelativeToolTip": "HAL\\WordPair.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T19:56:41.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -26,9 +39,9 @@
               "Title": "HAL.cs",
               "DocumentMoniker": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\HAL.cs",
               "RelativeDocumentMoniker": "HAL\\HAL.cs",
-              "ToolTip": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\HAL.cs*",
-              "RelativeToolTip": "HAL\\HAL.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBgAAAAoAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\HAL.cs",
+              "RelativeToolTip": "HAL\\HAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T19:46:43.255Z",
               "EditorCaption": ""

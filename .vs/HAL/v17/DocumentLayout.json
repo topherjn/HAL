@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -26,16 +26,12 @@
               "Title": "WordPair.cs",
               "DocumentMoniker": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\WordPair.cs",
               "RelativeDocumentMoniker": "HAL\\WordPair.cs",
-              "ToolTip": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\WordPair.cs*",
-              "RelativeToolTip": "HAL\\WordPair.cs*",
+              "ToolTip": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\WordPair.cs",
+              "RelativeToolTip": "HAL\\WordPair.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T19:56:41.758Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -43,9 +39,9 @@
               "Title": "HAL.cs",
               "DocumentMoniker": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\HAL.cs",
               "RelativeDocumentMoniker": "HAL\\HAL.cs",
-              "ToolTip": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\HAL.cs",
-              "RelativeToolTip": "HAL\\HAL.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wA4AAAA0AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\nicho\\source\\repos\\HAL\\HAL\\HAL.cs*",
+              "RelativeToolTip": "HAL\\HAL.cs*",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwC4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T19:46:43.255Z",
               "EditorCaption": ""

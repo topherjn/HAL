@@ -15,7 +15,7 @@ namespace HAL
             string dict = Properties.Resources.dict;
             // Split the dictionary into words and store them in a HashSet for fast lookup
             HashSet<string> words = new HashSet<string>(dict.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
-
+            List<WordPair> wordPairs = new List<WordPair>();
 
             // Initialize variables to track the longest shifted word
             int max = 0;
@@ -42,7 +42,7 @@ namespace HAL
                     // Check if the shifted word is in the dictionary
                     if (words.Contains(shiftedWord))
                     {
-                   
+                        wordPairs.Add(new WordPair(word, shiftedWord, j));
 
                         if (shiftedWord.Length > max)
 
@@ -55,6 +55,12 @@ namespace HAL
             }
             // Print the longest shifted word found
             Console.WriteLine($"Longest shifted word: {longestWord} with length {max}");
+
+            // Print all word pairs found
+            foreach (var pair in wordPairs)
+            {
+                Console.WriteLine(pair.ToString());
+            }
         }
     }
 }
