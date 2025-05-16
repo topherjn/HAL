@@ -35,8 +35,10 @@ namespace HAL
                             shifted.Append(c);
                     }
 
+                    // Convert the shifted StringBuilder to a string
                     string shiftedWord = shifted.ToString();
 
+                    // Check if the shifted word exists in the dictionary
                     if (words.Contains(shiftedWord))
                     {
                         // Store word pairs in a consistent order, along with both shift directions
@@ -44,17 +46,13 @@ namespace HAL
                             uniquePairs.Add((word, shiftedWord, j, 26 - j));
                         else
                             uniquePairs.Add((shiftedWord, word, 26 - j, j));
-
-                        if (shiftedWord.Length > max)
-                        {
-                            max = shiftedWord.Length;
-                            longestWord = shiftedWord;
-                        }
                     }
                 }
             }
 
-            var longestPair = uniquePairs.FirstOrDefault(pair => pair.Item2 == longestWord || pair.Item1 == longestWord);
+            // Find the longest word pair
+           var longestPair = uniquePairs.OrderByDescending(pair => Math.Max(pair.Item1.Length, pair.Item2.Length)).FirstOrDefault();
+
             if (longestPair != default)
             {
                 Console.WriteLine($"Longest word pair: {longestPair.Item1} - {longestPair.Item2} | Shift: {longestPair.Item3} forward, {longestPair.Item4} backward");
