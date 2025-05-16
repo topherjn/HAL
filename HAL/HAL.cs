@@ -15,11 +15,10 @@ namespace HAL
             string dict = Properties.Resources.dict;
             // Split the dictionary into words and store them in a HashSet for fast lookup
             HashSet<string> words = new HashSet<string>(dict.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
-            List<WordPair> wordPairs = new List<WordPair>();
-
-            // Initialize variables to track the longest shifted word
+            HashSet<(string, string)> uniquePairs = new HashSet<(string, string)>();
+            
             int max = 0;
-            string longestWord = "";
+            string longestWord = string.Empty;
 
             // Iterate through each possible shift (1 to 25)
             for (int j = 1; j < 26; j++)
@@ -36,16 +35,15 @@ namespace HAL
                             shifted.Append(c);
                     }
 
-                    // Convert the shifted StringBuilder to a string
                     string shiftedWord = shifted.ToString();
 
-                    // Check if the shifted word is in the dictionary
                     if (words.Contains(shiftedWord))
                     {
-                        wordPairs.Add(new WordPair(word, shiftedWord, j));
+                        // Store word pairs in a consistent order
+                        var orderedPair = word.CompareTo(shiftedWord) < 0 ? (word, shiftedWord) : (shiftedWord, word);
+                        uniquePairs.Add(orderedPair);
 
                         if (shiftedWord.Length > max)
-
                         {
                             max = shiftedWord.Length;
                             longestWord = shiftedWord;
@@ -53,13 +51,14 @@ namespace HAL
                     }
                 }
             }
+
             // Print the longest shifted word found
             Console.WriteLine($"Longest shifted word: {longestWord} with length {max}");
 
-            // Print all word pairs found
-            foreach (var pair in wordPairs)
+            // Print unique word pairs found
+            foreach (var pair in uniquePairs)
             {
-                Console.WriteLine(pair.ToString());
+                Console.WriteLine($"{pair.Item1} - {pair.Item2}");
             }
         }
     }
