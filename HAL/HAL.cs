@@ -1,75 +1,51 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 
 namespace HAL
 {
     class HAL
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            // import the entire dictionary into one string
             string dict = Properties.Resources.dict;
+            HashSet<string> words = new HashSet<string>(dict.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+
+            string shiftedWord;
+
             int max = 0;
-            string longestWord = String.Empty;
+            string longestWord = "";
 
-            // break up into an array of strings
-            char[] delimiters = new char[] { '\r', '\n' };
-            string[] lines = dict.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
-
-            // insert each word into a binary tree
-            SortedDictionary<string, string> d = new SortedDictionary<string, string>();
-
-            foreach(var word in lines)
+            for (int j = 1; j < 26; j++)
             {
-                d.Add(word, word);
-            }
-
-            //foreach(var pair in d)
-            //{
-            //    Console.WriteLine(pair.Key + " " + pair.Value);
-            //}
-
-            // number of times to shift
-            for(int j = 1; j < 26; j++)
-            {
-                // for each dictionary entry
-                foreach(var pair in d)
+                foreach (string word in words.AsParallel()) // Parallelizing for efficiency
                 {
-                    // create a string builder
-                    StringBuilder shift = new StringBuilder();
-                    string word = pair.Value;
+                    var shifted = new StringBuilder(word.Length);
 
-                    // convert the word into an array of characters
-                    char[] letters = word.ToCharArray();
-
-                    // iterate over all the characters in the word
-                    for(int i = 0; i < letters.Length; i++)
+                    foreach (char c in word)
                     {
-                        int letter = (int)letters[i];
-
-                        if (letter + j > 'z') letter -= (26 - j);
-                        else letter += j;
-
-                        letters[i] = (char)letter;
-                        shift.Append(letters[i]);
+                        if (char.IsLetter(c))
+                            shifted.Append((char)((c - 'a' + j) % 26 + 'a'));
+                        else
+                            shifted.Append(c);
                     }
 
-                    if(d.ContainsKey(shift.ToString()))
+                    shiftedWord = shifted.ToString();
+                    if (words.Contains(shiftedWord))
                     {
-                        if(shift.Length > max)
+                        Console.WriteLine($"Shifted by {j}: {word} -> {shiftedWord}");
+
+                        if (shiftedWord.Length > max)
+
                         {
-                            max = shift.Length;
-                            longestWord = shift.ToString();
+                            max = shiftedWord.Length;
+                            longestWord = shiftedWord;
                         }
-                        Console.WriteLine("Shifted by {2}: {0} {1}", word, shift, j);
                     }
                 }
             }
-
-            Console.WriteLine("{0} is the longest word at a length of {1}", longestWord, longestWord.Length);
         }
     }
 }
-

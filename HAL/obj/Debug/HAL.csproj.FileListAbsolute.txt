@@ -33,3 +33,13 @@ C:\Users\nicholson\Desktop\Repos\HAL\HAL\bin\Debug\HAL.pdb
 C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.csprojResolveAssemblyReference.cache
 C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.Properties.Resources.resources
 C:\Users\nicholson\Desktop\Repos\HAL\HAL\obj\Debug\HAL.csproj.GenerateResource.Cache
+C:\Users\nicho\Source\Repos\HAL\HAL\bin\Debug\HAL.exe.config
+C:\Users\nicho\Source\Repos\HAL\HAL\bin\Debug\HAL.exe
+C:\Users\nicho\Source\Repos\HAL\HAL\bin\Debug\HAL.pdb
+C:\Users\nicho\Source\Repos\HAL\HAL\obj\Debug\HAL.csproj.AssemblyReference.cache
+C:\Users\nicho\Source\Repos\HAL\HAL\obj\Debug\HAL.exe.config
+C:\Users\nicho\Source\Repos\HAL\HAL\obj\Debug\HAL.Properties.Resources.resources
+C:\Users\nicho\Source\Repos\HAL\HAL\obj\Debug\HAL.csproj.GenerateResource.cache
+C:\Users\nicho\Source\Repos\HAL\HAL\obj\Debug\HAL.csproj.CoreCompileInputs.cache
+C:\Users\nicho\Source\Repos\HAL\HAL\obj\Debug\HAL.exe
+C:\Users\nicho\Source\Repos\HAL\HAL\obj\Debug\HAL.pdb
